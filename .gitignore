@@ -1,2 +1,14 @@
 .vs/
 *.vsidx
+/OndeVaiPassar.CommandStore/bin
+/OndeVaiPassar.CommandStore/obj
+/OndeVaiPassar.Contract/bin/Debug/net9.0
+/OndeVaiPassar.Domain/bin/Debug/net9.0
+/OndeVaiPassar.Domain/obj/Debug/net9.0/ref
+/OndeVaiPassar.Domain/obj/Debug/net9.0/refint
+/OndeVaiPassar.Enum/bin/Debug/net9.0
+/OndeVaiPassar.Enum/obj/Debug/net9.0/ref
+/OndeVaiPassar.Command/bin
+/OndeVaiPassar.Command/obj
+/OndeVaiPassar.Contract/obj/Debug/net9.0/ref
+/OndeVaiPassar.Contract/obj/Debug/net9.0/refint

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "OndeVaiPassar.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/OndeVaiPassar.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OndeVaiPassar.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "OndeVaiPassar.Domain/1.0.0": {
+      "type": "project",
+      "path": "../OndeVaiPassar.Domain/OndeVaiPassar.Domain.csproj",
+      "msbuildProject": "../OndeVaiPassar.Domain/OndeVaiPassar.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "OndeVaiPassar.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\lucas\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Projetos\\OndeVaiPassar\\OndeVaiPassar.Domain\\OndeVaiPassar.Domain.csproj": {
+              "projectPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Projetos\\OndeVaiPassar\\OndeVaiPassar.Domain\\OndeVaiPassar.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

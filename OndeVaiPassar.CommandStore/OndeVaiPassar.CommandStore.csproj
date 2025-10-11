@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.66" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OndeVaiPassar.Command\OndeVaiPassar.Command.csproj" />
+    <ProjectReference Include="..\OndeVaiPassar.Domain\OndeVaiPassar.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

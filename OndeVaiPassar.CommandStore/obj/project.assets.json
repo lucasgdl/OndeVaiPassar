@@ -1,11 +1,82 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "Dapper/2.1.66": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OndeVaiPassar.Command/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "OndeVaiPassar.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OndeVaiPassar.Command.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OndeVaiPassar.Command.dll": {}
+        }
+      },
+      "OndeVaiPassar.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/OndeVaiPassar.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OndeVaiPassar.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Dapper/2.1.66": {
+      "sha512": "/q77jUgDOS+bzkmk3Vy9SiWMaetTw+NOoPAV0xPBsGVAyljd5S6P+4RUW7R3ZUGGr9lDRyPKgAMj2UAOwvqZYw==",
+      "type": "package",
+      "path": "dapper/2.1.66",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.1.66.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net8.0/Dapper.dll",
+        "lib/net8.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
+      ]
+    },
+    "OndeVaiPassar.Command/1.0.0": {
+      "type": "project",
+      "path": "../OndeVaiPassar.Command/OndeVaiPassar.Command.csproj",
+      "msbuildProject": "../OndeVaiPassar.Command/OndeVaiPassar.Command.csproj"
+    },
+    "OndeVaiPassar.Domain/1.0.0": {
+      "type": "project",
+      "path": "../OndeVaiPassar.Domain/OndeVaiPassar.Domain.csproj",
+      "msbuildProject": "../OndeVaiPassar.Domain/OndeVaiPassar.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "Dapper >= 2.1.66",
+      "OndeVaiPassar.Command >= 1.0.0",
+      "OndeVaiPassar.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\lucas\\.nuget\\packages\\": {},
@@ -38,7 +109,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Projetos\\OndeVaiPassar\\OndeVaiPassar.Command\\OndeVaiPassar.Command.csproj": {
+              "projectPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Projetos\\OndeVaiPassar\\OndeVaiPassar.Command\\OndeVaiPassar.Command.csproj"
+            },
+            "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Projetos\\OndeVaiPassar\\OndeVaiPassar.Domain\\OndeVaiPassar.Domain.csproj": {
+              "projectPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Projetos\\OndeVaiPassar\\OndeVaiPassar.Domain\\OndeVaiPassar.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -56,6 +134,12 @@
     "frameworks": {
       "net9.0": {
         "targetAlias": "net9.0",
+        "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.1.66, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

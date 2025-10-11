@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "zx7qUxnUip2g9TcDZfIxiGy9f0N6dJLq5avmmYQYVWc=",
+  "Source": "OndeVaiPassar.Api",
+  "BasePath": "_content/OndeVaiPassar.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

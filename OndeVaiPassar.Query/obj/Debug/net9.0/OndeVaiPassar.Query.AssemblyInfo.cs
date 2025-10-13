@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OndeVaiPassar.Query")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+014a6ebe41b6984eb6b5feebf112c1c7e34f31a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9351f382408c647c57190aa78fd19394216f10c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("OndeVaiPassar.Query")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OndeVaiPassar.Query")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -14,4 +14,11 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OndeVaiPassar.Domain\OndeVaiPassar.Domain.csproj" />
+    <ProjectReference Include="..\OndeVaiPassar.Persistence\OndeVaiPassar.Persistence.csproj" />
+    <ProjectReference Include="..\OndeVaiPassar.QueryStore\OndeVaiPassar.QueryStore.csproj" />
+    <ProjectReference Include="..\OndeVaiPassar.Query\OndeVaiPassar.Query.csproj" />
+  </ItemGroup>
+
 </Project>

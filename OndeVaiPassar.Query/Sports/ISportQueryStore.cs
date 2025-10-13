@@ -1,9 +1,9 @@
-﻿using OndeVaiPassar.Domain.Entities.Sports;
+﻿using OndeVaiPassar.DTOs;
 
 namespace OndeVaiPassar.Query.Sports;
 
 public interface ISportQueryStore
 {
-    Task<SportEntity?> GetByIdAsync(long id);
-    Task<IEnumerable<SportEntity>> GetAllAsync();
+    Task<SportDto?> GetByIdAsync(int id);
+    Task<IEnumerable<SportDto>> ListAllAsync();
 }

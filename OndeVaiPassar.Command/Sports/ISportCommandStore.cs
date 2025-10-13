@@ -4,6 +4,7 @@ namespace OndeVaiPassar.Command.Sports;
 
 public interface ISportCommandStore
 {
-    Task<int> AddAsync(SportEntity item);
-    Task<int> UpdateAsync(SportEntity item);
+    Task<int> CreateAsync(SportEntity sport);
+    Task<int> UpdateAsync(SportEntity sport);
+    Task<int> DeleteAsync(int id);
 }

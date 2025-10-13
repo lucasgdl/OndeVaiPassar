@@ -1,28 +1,52 @@
-﻿using System.Data;
-using OndeVaiPassar.Command.Sports;
+﻿using OndeVaiPassar.Command.Sports;
 using OndeVaiPassar.Domain.Entities.Sports;
 using Dapper;
+using OndeVaiPassar.Persistence;
 
 namespace OndeVaiPassar.CommandStore.Sports;
 
 public class SportCommandStore : ISportCommandStore
 {
-    private readonly IDbConnection _db;
+    private readonly DbConnectionFactory _factory;
 
-    public SportCommandStore(IDbConnection db)
+    public SportCommandStore(DbConnectionFactory factory)
     {
-        _db = db;
+        _factory = factory;
     }
 
-    public async Task<int> AddAsync(SportEntity item)
+    public async Task<int> CreateAsync(SportEntity sport)
     {
-        var sql = "INSERT INTO Sports (Name, LogoUrl, OperatorCode, CreatedAt) VALUES (@Name, @LogoUrl, @OperatorCode, @CreatedAt); SELECT CAST(SCOPE_IDENTITY() as int);";
-        return await _db.ExecuteScalarAsync<int>(sql, item);
+        const string sql = @"
+                INSERT INTO Sports (Id, Name, Category, CreatedAt)
+                VALUES (@Id, @Name, @Category, @CreatedAt);
+            ";
+
+        using var connection = _factory.CreateConnection();
+        int id = await connection.ExecuteAsync(sql, sport);
+        sport.SetId(id);
+        return id;
     }
 
-    public async Task<int> UpdateAsync(SportEntity item)
+    public async Task<int> UpdateAsync(SportEntity sport)
     {
-        var sql = "UPDATE Sports SET Name = @Name, LogoUrl = @LogoUrl WHERE Id = @Id";
-        return await _db.ExecuteAsync(sql, item);
+        const string sql = @"
+                UPDATE Sports
+                SET Name = @Name,
+                    Category = @Category
+                WHERE Id = @Id;
+            ";
+
+        using var connection = _factory.CreateConnection();
+        int id = await connection.ExecuteAsync(sql, sport);
+        sport.SetId(id);
+        return id;
+    }
+
+    public async Task<int> DeleteAsync(int id)
+    {
+        const string sql = "DELETE FROM Sports WHERE Id = @Id;";
+        using var connection = _factory.CreateConnection();
+        await connection.ExecuteAsync(sql, new { Id = id });
+        return id;
     }
 }

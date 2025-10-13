@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\OndeVaiPassar.Command\OndeVaiPassar.Command.csproj" />
     <ProjectReference Include="..\OndeVaiPassar.Domain\OndeVaiPassar.Domain.csproj" />
+    <ProjectReference Include="..\OndeVaiPassar.Persistence\OndeVaiPassar.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,6 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OndeVaiPassar.DTOs\OndeVaiPassar.DTOs.csproj" />
+    <ProjectReference Include="..\OndeVaiPassar.Persistence\OndeVaiPassar.Persistence.csproj" />
     <ProjectReference Include="..\OndeVaiPassar.Query\OndeVaiPassar.Query.csproj" />
   </ItemGroup>
 

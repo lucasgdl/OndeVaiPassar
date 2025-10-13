@@ -2,27 +2,33 @@
 using OndeVaiPassar.Domain.Entities.Sports;
 using OndeVaiPassar.Query.Sports;
 using Dapper;
+using OndeVaiPassar.DTOs;
+using OndeVaiPassar.Persistence;
 
 namespace OndeVaiPassar.QueryStore.Sports;
 
 public class SportQueryStore : ISportQueryStore
 {
-    private readonly IDbConnection _db;
+    private readonly DbConnectionFactory _factory;
 
-    public SportQueryStore(IDbConnection db)
+    public SportQueryStore(DbConnectionFactory factory)
     {
-        _db = db;
+        _factory = factory;
     }
 
-    public async Task<IEnumerable<SportEntity>> GetAllAsync()
+    public async Task<SportDto?> GetByIdAsync(int id)
     {
-        var sql = "SELECT Id, Name, LogoUrl, OperatorCode, CreatedAt FROM Sports";
-        return await _db.QueryAsync<SportEntity>(sql);
+        const string sql = "SELECT Id, Name, LogoUrl, CreatedAt FROM Sports WHERE Id = @Id";
+
+        using var connection = _factory.CreateConnection();
+        return await connection.QueryFirstOrDefaultAsync<SportDto>(sql, new { Id = id });
     }
 
-    public async Task<SportEntity?> GetByIdAsync(long id)
+    public async Task<IEnumerable<SportDto>> ListAllAsync()
     {
-        var sql = "SELECT Id, Name, LogoUrl, OperatorCode, CreatedAt FROM Sports WHERE Id = @Id";
-        return await _db.QueryFirstOrDefaultAsync<SportEntity>(sql, new { Id = id });
+        const string sql = "SELECT Id, Name, LogoUrl, CreatedAt FROM Sports ORDER BY CreatedAt DESC";
+
+        using var connection = _factory.CreateConnection();
+        return await connection.QueryAsync<SportDto>(sql);
     }
 }

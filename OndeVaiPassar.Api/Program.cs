@@ -1,10 +1,25 @@
+using System;
+using OndeVaiPassar.Domain.Interfaces;
+using OndeVaiPassar.Persistence.Context;
+using OndeVaiPassar.Query.Sports;
+using OndeVaiPassar.QueryStore.Sports;
+using Microsoft.EntityFrameworkCore;
+using OndeVaiPassar.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
 
-// Add services to the container.
+//services.AddDbContext<AppDbContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+services.AddSingleton<DbConnectionFactory>();
+services.AddScoped<ISportRepository, SportRepository>();
+services.AddScoped<ISportQueryStore, SportQueryStore>();
+
+services.AddControllers();
+services.AddEndpointsApiExplorer();
+//services.AddSwaggerGen();
+services.AddOpenApi();
 
 var app = builder.Build();
 

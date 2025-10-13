@@ -24,3 +24,5 @@
 /OndeVaiPassar.Api/bin
 /OndeVaiPassar.IntegrationTests/obj
 /OndeVaiPassar.IntegrationTests/bin
+/OndeVaiPassar.DTOs/obj
+/OndeVaiPassar.Persistence/obj

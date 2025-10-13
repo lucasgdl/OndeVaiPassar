@@ -26,3 +26,17 @@
 /OndeVaiPassar.IntegrationTests/bin
 /OndeVaiPassar.DTOs/obj
 /OndeVaiPassar.Persistence/obj
+/OndeVaiPassar.Api/obj/Debug/net9.0/OndeVaiPassar.Api.AssemblyInfoInputs.cache
+/OndeVaiPassar.Api/obj/Debug/net9.0/OndeVaiPassar.Api.csproj.AssemblyReference.cache
+/OndeVaiPassar.Command/obj/Debug/net9.0/OndeVaiPassar.Command.AssemblyInfoInputs.cache
+/OndeVaiPassar.Command/obj/Debug/net9.0/OndeVaiPassar.Command.AssemblyInfo.cs
+/OndeVaiPassar.Command/obj/Debug/net9.0/OndeVaiPassar.Command.assets.cache
+/OndeVaiPassar.CommandStore/obj/Debug/net9.0/OndeVaiPassar.CommandStore.AssemblyInfo.cs
+/OndeVaiPassar.CommandStore/obj/Debug/net9.0/OndeVaiPassar.CommandStore.AssemblyInfoInputs.cache
+/OndeVaiPassar.Contract/obj/Debug/net9.0/OndeVaiPassar.Contract.AssemblyInfo.cs
+/OndeVaiPassar.Contract/obj/Debug/net9.0/OndeVaiPassar.Contract.AssemblyInfoInputs.cache
+/OndeVaiPassar.Contract/obj/Debug/net9.0/OndeVaiPassar.Contract.assets.cache
+/OndeVaiPassar.Query/obj/Debug/net9.0/OndeVaiPassar.Query.AssemblyInfo.cs
+/OndeVaiPassar.Query/obj/Debug/net9.0/OndeVaiPassar.Query.AssemblyInfoInputs.cache
+/OndeVaiPassar.QueryStore/obj/Debug/net9.0/OndeVaiPassar.QueryStore.AssemblyInfo.cs
+/OndeVaiPassar.QueryStore/obj/Debug/net9.0/OndeVaiPassar.QueryStore.AssemblyInfoInputs.cache

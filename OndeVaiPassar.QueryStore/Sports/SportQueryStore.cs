@@ -1,6 +1,4 @@
-﻿using System.Data;
-using OndeVaiPassar.Domain.Entities.Sports;
-using OndeVaiPassar.Query.Sports;
+﻿using OndeVaiPassar.Query.Sports;
 using Dapper;
 using OndeVaiPassar.DTOs;
 using OndeVaiPassar.Persistence;

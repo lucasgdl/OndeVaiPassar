@@ -3,6 +3,7 @@
 public class BroadcasterEntity : BaseEntity
 {
     public required string Name { get; set; }
-    public required string LogoUrl { get; set; }
+    public required string ShortName { get; set; }
+    public required string Color { get; set; }
     public string? Link { get; set; }
 }

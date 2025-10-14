@@ -11,4 +11,8 @@
     <ProjectReference Include="..\OndeVaiPassar.DTOs\OndeVaiPassar.DTOs.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Venues\" />
+  </ItemGroup>
+
 </Project>

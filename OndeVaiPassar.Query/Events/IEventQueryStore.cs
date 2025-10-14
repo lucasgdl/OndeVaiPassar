@@ -1,4 +1,4 @@
-﻿using OndeVaiPassar.Domain.Entities.Event;
+﻿using OndeVaiPassar.Domain.Entities.Events;
 
 namespace OndeVaiPassar.Query.Events;
 

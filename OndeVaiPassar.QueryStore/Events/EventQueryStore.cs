@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using OndeVaiPassar.Domain.Entities.Broadcasters;
-using OndeVaiPassar.Domain.Entities.Event;
+using OndeVaiPassar.Domain.Entities.Events;
 using OndeVaiPassar.Domain.Entities.EventBroadcasts;
 using OndeVaiPassar.Query.Events;
 using System.Data;

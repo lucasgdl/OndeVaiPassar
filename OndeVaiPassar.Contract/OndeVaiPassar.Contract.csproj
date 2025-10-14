@@ -15,6 +15,7 @@
     <Folder Include="Events\Queries\" />
     <Folder Include="Tournaments\Commands\" />
     <Folder Include="Tournaments\Queries\" />
+    <Folder Include="Venues\Queries\" />
   </ItemGroup>
 
   <ItemGroup>

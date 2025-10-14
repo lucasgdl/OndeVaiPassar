@@ -22,9 +22,8 @@ public class SportCommandStore : ISportCommandStore
             ";
 
         using var connection = _factory.CreateConnection();
-        int id = await connection.ExecuteAsync(sql, sport);
-        sport.SetId(id);
-        return id;
+        connection.Open();
+        return await connection.ExecuteScalarAsync<int>(sql, sport);
     }
 
     public async Task<int> UpdateAsync(SportEntity sport)
